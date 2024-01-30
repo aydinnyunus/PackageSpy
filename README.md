@@ -54,7 +54,7 @@ go run . scan --search datascience --pypi
 
 ## Contributing
 
-PackageSpy is an open-source project, and we welcome contributions from the community. If you have ideas for improvements or would like to report issues, please visit our GitHub repository: [PackageSpy on GitHub](https://github.com/aydinnyunus/PackageSpy)
+PackageSpy is an open-source project, and we welcome contributions from the community. If you have ideas for improvements or would like to report issues, please visit our GitHub repository: [PackageSpy](https://github.com/aydinnyunus/PackageSpy)
 
 
 ## Contact
