@@ -10,7 +10,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/spf13/secretScanner/utils"
+	"github.com/aydinnyunus/PackageSpy/utils"
 )
 
 func getPyPIDownloadUrl(packageURL string) string {

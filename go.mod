@@ -1,10 +1,10 @@
-module github.com/spf13/secretScanner
+module github.com/aydinnyunus/PackageSpy
 
-go 1.21.1
+go 1.22.3
 
 require (
 	github.com/spf13/cobra v1.8.0
-	golang.org/x/net v0.20.0
+	golang.org/x/net v0.26.0
 )
 
 require (

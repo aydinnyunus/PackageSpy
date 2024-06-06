@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/spf13/secretScanner/utils"
+	"github.com/aydinnyunus/PackageSpy/utils"
 )
 
 func DownloadAllNpmPackages(username string) {

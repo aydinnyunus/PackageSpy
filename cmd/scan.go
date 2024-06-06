@@ -5,8 +5,8 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/spf13/secretScanner/utils/npm"
-	"github.com/spf13/secretScanner/utils/pypi"
+	"github.com/aydinnyunus/PackageSpy/utils/npm"
+	"github.com/aydinnyunus/PackageSpy/utils/pypi"
 
 	"github.com/spf13/cobra"
 )
