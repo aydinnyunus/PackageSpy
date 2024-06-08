@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"github.com/aydinnyunus/PackageSpy/utils/npm"
 	"github.com/aydinnyunus/PackageSpy/utils/pypi"
-
 	"github.com/spf13/cobra"
+	"os"
 )
 
 // scanCmd represents the scan command
@@ -22,15 +22,31 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
+
 		//fmt.Println(cmd.Flag("username").Value)
-		if cmd.Flags().Lookup("pypi").Changed {
-			fmt.Println("pypi called")
-			fmt.Println(cmd.Flag("username").Value.String())
-			pypi.DownloadAllPyPIPackages(cmd.Flag("username").Value.String())
-		} else if cmd.Flags().Lookup("npm").Changed {
-			fmt.Println("npm called")
-			fmt.Println(cmd.Flag("username").Value.String())
-			npm.DownloadAllNpmPackages(cmd.Flag("username").Value.String())
+		if cmd.Flags().Lookup("username").Changed {
+			if cmd.Flags().Lookup("pypi").Changed {
+				fmt.Println("pypi called")
+				fmt.Println(cmd.Flag("username").Value.String())
+				pypi.DownloadAllPyPIPackages(cmd.Flag("username").Value.String())
+			} else if cmd.Flags().Lookup("npm").Changed {
+				fmt.Println("npm called")
+				fmt.Println(cmd.Flag("username").Value.String())
+				npm.DownloadAllNpmPackages(cmd.Flag("username").Value.String())
+			}
+		} else if cmd.Flags().Lookup("search").Changed {
+			if cmd.Flags().Lookup("pypi").Changed {
+				fmt.Println("pypi called")
+				fmt.Println(cmd.Flag("search").Value.String())
+				pypi.DownloadAllPyPIPackagesSearch(cmd.Flag("search").Value.String())
+			} else if cmd.Flags().Lookup("npm").Changed {
+				fmt.Println("npm called")
+				fmt.Println(cmd.Flag("search").Value.String())
+				npm.DownloadAllNpmPackagesSearch(cmd.Flag("search").Value.String())
+			}
+		} else {
+			cmd.Help()
+			os.Exit(0)
 		}
 	},
 }
@@ -47,6 +63,7 @@ func init() {
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
 	scanCmd.Flags().StringP("username", "u", "", "Username for Package Manager")
+	scanCmd.Flags().StringP("search", "s", "", "Search keyword on Package Manager")
 	scanCmd.Flags().BoolP("pypi", "p", false, "is PyPI")
 	scanCmd.Flags().BoolP("npm", "n", false, "is NPM")
 	/*
