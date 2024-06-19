@@ -1,6 +1,6 @@
 # PackageSpy
 
-PackageSpy is a versatile command-line tool designed to simplify the process of searching for packages on two popular package managers: npm and PyPI. Whether you want to find packages by a specific keyword or a user's username, PackageSpy has got you covered. This tool is especially useful for developers and package maintainers who want to quickly discover relevant packages for their projects.
+PackageSpy is a versatile command-line tool designed to simplify the process of searching for secrets within packages on popular package managers using Gitleaks. It provides a convenient interface for security researchers, developers and system administrators to identify and manage sensitive information leaks across different environments.
 
 ## Installation
 
