@@ -12,13 +12,11 @@ import (
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "PackageSpy",
-	Short: "A brief description of your application",
-	Long: `A longer description that spans multiple lines and likely contains
-examples and usage of using your application. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Short: "PackageSpy scans for secrets with Gitleaks by searching on package managers",
+	Long: `PackageSpy is a versatile command-line tool designed to simplify the process 
+of searching for secrets within packages on popular package managers using Gitleaks. 
+It provides a convenient interface for developers and system administrators to identify 
+and manage sensitive information leaks across different environments.`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	Run: func(cmd *cobra.Command, args []string) {
